@@ -48,23 +48,23 @@ public:
 
     //insert a new node at the beginning of the linked list
     void insertAtBeginning(int data){
-        SinglyLinkedListNode* newSinglyLinkedListNode = new SinglyLinkedListNode(data);
-        newSinglyLinkedListNode->next = head;
-        head = newSinglyLinkedListNode;
+        SinglyLinkedListNode* newNode = new SinglyLinkedListNode(data);
+        newNode->next = head;
+        head = newNode;
     }
 
     //insert a new node at the end of the linked list
     void insertAtEnd(int data){
-        SinglyLinkedListNode* newSinglyLinkedListNode = new SinglyLinkedListNode(data);
+        SinglyLinkedListNode* newNode = new SinglyLinkedListNode(data);
         if(head == nullptr){
-            head = newSinglyLinkedListNode;
+            head = newNode;
             return;
         }
         SinglyLinkedListNode* temp = head;
         while(temp->next != nullptr){
             temp = temp->next;
         }
-        temp->next = newSinglyLinkedListNode;
+        temp->next = newNode;
     }
 
     //insert a new node at a specific position of the linked list
@@ -81,13 +81,13 @@ public:
             insertAtEnd(data);
             return;
         }
-        SinglyLinkedListNode* newSinglyLinkedListNode = new SinglyLinkedListNode(data);
+        SinglyLinkedListNode* newNode = new SinglyLinkedListNode(data);
         SinglyLinkedListNode* temp = head;
         for(int i = 1; i < position-1; i++){
             temp = temp->next;
         }
-        newSinglyLinkedListNode->next = temp->next;
-        temp->next = newSinglyLinkedListNode;
+        newNode->next = temp->next;
+        temp->next = newNode;
     }
 
     //delete the first node of the linked list
