@@ -4,8 +4,24 @@
 
 using namespace std;
 
-//Floyd's cycle detection algorithm for singly linked list
-bool detectCycleInSinglyLinkedList(SinglyLinkedListNode* head){
+/*
+Floyd's cycle detection algorithm is used to detect a cycle in a linked list.
+It is also known as the "Tortoise and the Hare" algorithm.
+The algorithm uses two pointers, one moving at twice the speed of the other.
+If there is a cycle in the linked list, the two pointers will meet at some point.
+If there is no cycle, the faster pointer will reach the end of the linked list.
+
+The algorithm has a time complexity of O(n) and a space complexity of O(1).
+*/
+
+/*
+function - detectCycle() is being overloaded 
+for singly linked list and doubly linked list
+so as to make the function generalised for each
+*/
+
+//for singly linked list
+bool detectCycle(SinglyLinkedListNode* head){
     SinglyLinkedListNode* slow = head;
     SinglyLinkedListNode* fast = head;
 
@@ -21,8 +37,8 @@ bool detectCycleInSinglyLinkedList(SinglyLinkedListNode* head){
     return false;
 }
 
-//Floyd's cycle detection algorithm for doubly linked list
-bool detectCycleInDoublyLinkedList(DoublyLinkedListNode* head){
+//for doubly linked list
+bool detectCycle(DoublyLinkedListNode* head){
     DoublyLinkedListNode* slow = head;
     DoublyLinkedListNode* fast = head;
 
