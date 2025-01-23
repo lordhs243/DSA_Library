@@ -3,19 +3,18 @@
 
 using namespace std;
 
-class LinkedList{
+class SinglyLinkedList{
 private:
     SinglyLinkedListNode* head;
 
 public:
-
     //default constructor for initiation
-    LinkedList(){
+    SinglyLinkedList(){
         head = nullptr;
     }
 
     //constructor for initiating with head value
-    LinkedList(int headData){
+    SinglyLinkedList(int headData){
         head->data = headData;
         head->next = nullptr;
     }
